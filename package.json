@@ -21,6 +21,12 @@
 	],
 	"main": "./client/out/extension",
 	"contributes": {
+		"snippets": [
+			{
+				"language": "script",
+				"path": "./snippets/script.snippet.json"
+			}
+		],
 		"languages": [
 			{
 				"id": "script",
