@@ -1,0 +1,72 @@
+{
+	"Pay To Script Hash": {
+			"prefix": ["p2sh"],
+			"body": ["pk(${1:key})"],
+			"description": ""
+	},
+	"The BOLT #3 to_local policy": {
+			"prefix": ["bolt#3to_local"],
+			"body": ["or(pk(${1:key_revocation}),and(pk(${2:key_local}),older(${3:1008})))"],
+			"description": ""
+	},
+	"The BOLT #3 offered HTLC policy": {
+			"prefix": ["bolt#offered"],
+			"body": ["or(pk(${1:key_revocation}),and(pk(${2:key_remote}),or(pk(${3:key_local}),hash160(${4:H}))))"],
+			"description": ""
+	},
+	"The BOLT #3 received HTLC policy": {
+			"prefix": ["bolt#received"],
+			"body": ["or(pk(${1:key_revocation}),and(pk(${2:key_remote}),or(and(pk(${3:key_local}),hash160(${4:H})),older(${5:1008}))))"],
+			"description": ""
+	},
+	"pk": {
+			"prefix": ["pk"],
+			"body": ["pk(${1:key})"],
+			"description": "check(key)"
+	},
+	"older": {
+			"prefix": ["older"],
+			"body": ["older(${1:n})"],
+			"description": "nSequence ≥ n (and compatible)"
+	},
+	"after": {
+			"prefix": ["after"],
+			"body": ["after(${1:n})"],
+			"description": "nLockTime ≥ n (and compatible)"
+	},
+	"sha256": {
+			"prefix": ["sha256"],
+			"body": ["sha256(${1:h})"],
+			"description": "len(x) = 32 and SHA256(x) = h"
+	},
+	"hash256": {
+			"prefix": ["hash256"],
+			"body": ["hash256(${1:h})"],
+			"description": "len(x) = 32 and HASH256(x) = h"
+	},
+	"ripemd160": {
+			"prefix": ["ripemd160"],
+			"body": ["ripemd160(${1:h})"],
+			"description": "len(x) = 32 and RIPEMD160(x) = h"
+	},
+	"hash160": {
+			"prefix": ["hash160"],
+			"body": ["hash160(${1:h})"],
+			"description": "len(x) = 32 and HASH160(x) = h"
+	},
+	"and": {
+			"prefix": ["and"],
+			"body": ["and(${1:x},${2:z})"],
+			"description": "X AND Z"
+	},
+	"or": {
+			"prefix": ["or"],
+			"body": ["or(${1:x},${2:z})"],
+			"description": "X or Z"
+	},
+	"thresh": {
+			"prefix": ["thresh"],
+			"body": ["thresh(${1:k},${2:x1},${3:x2},${4:...,xn})"],
+			"description": "X1 + ... + Xn = k"
+	}
+}

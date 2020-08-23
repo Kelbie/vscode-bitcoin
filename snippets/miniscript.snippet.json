@@ -1,0 +1,142 @@
+{
+	"pk": {
+			"prefix": ["pk"],
+			"body": ["pk(${1:key})"],
+			"description": "check(key)"
+	},
+	"pk_h": {
+			"prefix": ["pk_h"],
+			"body": ["pk_h(${1:key})"],
+			"description": "check(key)"
+	},
+	"older": {
+			"prefix": ["older"],
+			"body": ["older(${1:n})"],
+			"description": "nSequence ≥ n (and compatible)"
+	},
+	"after": {
+			"prefix": ["after"],
+			"body": ["after(${1:n})"],
+			"description": "nLockTime ≥ n (and compatible)"
+	},
+	"sha256": {
+			"prefix": ["sha256"],
+			"body": ["sha256(${1:h})"],
+			"description": "len(x) = 32 and SHA256(x) = h"
+	},
+	"hash256": {
+			"prefix": ["hash256"],
+			"body": ["hash256(${1:h})"],
+			"description": "len(x) = 32 and HASH256(x) = h"
+	},
+	"ripemd160": {
+			"prefix": ["ripemd160"],
+			"body": ["ripemd160(${1:h})"],
+			"description": "len(x) = 32 and RIPEMD160(x) = h"
+	},
+	"hash160": {
+			"prefix": ["hash160"],
+			"body": ["hash160(${1:h})"],
+			"description": "len(x) = 32 and HASH160(x) = h"
+	},
+	"andor": {
+			"prefix": ["andor"],
+			"body": ["andor(${1:x},${2:y},${3:z})"],
+			"description": "(X and Y) or Z"
+	},
+	"and_v": {
+			"prefix": ["and_v"],
+			"body": ["and_v(${1:x},${2:y})"],
+			"description": "X and Y"
+	},
+	"and_b": {
+			"prefix": ["and_b"],
+			"body": ["and_b(${1:x},${2:y})"],
+			"description": "X and Y"
+	},
+	"and_n": {
+			"prefix": ["and_n"],
+			"body": ["and_n(${1:x},${2:y})"],
+			"description": "X and Y"
+	},
+	"or_b": {
+			"prefix": ["or_b"],
+			"body": ["or_b(${1:x},${2:z})"],
+			"description": "X or Z"
+	},
+	"or_c": {
+			"prefix": ["or_c"],
+			"body": ["or_c(${1:x},${2:z})"],
+			"description": "X or Z"
+	},
+	"or_d": {
+			"prefix": ["or_d"],
+			"body": ["or_d(${1:x},${2:z})"],
+			"description": "X or Z"
+	},
+	"or_i": {
+			"prefix": ["or_i"],
+			"body": ["or_i(${1:x},${2:z})"],
+			"description": "X or Z"
+	},
+	"thresh": {
+			"prefix": ["thresh"],
+			"body": ["thresh(${1:k},${2:x1},${3:x2},${4:...,xn})"],
+			"description": "X1 + ... + Xn = k"
+	},
+	"thresh_m": {
+			"prefix": ["thresh_m"],
+			"body": ["thresh_m(${1:k},${2:key1},${3:...})"],
+			"description": "check(key1) + ... + check(keyn) = k"
+	},
+	"a:": {
+			"prefix": ["a:"],
+			"body": ["a:${1:X}"],
+			"description": "X (identities)"
+	},
+	"s:": {
+			"prefix": ["s:"],
+			"body": ["s:${1:X}"],
+			"description": "X (identities)"
+	},
+	"c:": {
+			"prefix": ["c:"],
+			"body": ["c:${1:X}"],
+			"description": "X (identities)"
+	},
+	"t:": {
+			"prefix": ["t:"],
+			"body": ["t:${1:X}"],
+			"description": "X (identities)"
+	},
+	"d:": {
+			"prefix": ["d:"],
+			"body": ["d:${1:X}"],
+			"description": "X (identities)"
+	},
+	"v:": {
+			"prefix": ["v:"],
+			"body": ["v:${1:X}"],
+			"description": "X (identities)"
+	},
+	"j:": {
+			"prefix": ["j:"],
+			"body": ["j:${1:X}"],
+			"description": "X (identities)"
+	},
+	"n:": {
+			"prefix": ["n:"],
+			"body": ["n:${1:X}"],
+			"description": "X (identities)"
+	},
+	"l:": {
+			"prefix": ["l:"],
+			"body": ["l:${1:X}"],
+			"description": "X (identities)"
+	},
+	"u:": {
+			"prefix": ["u:"],
+			"body": ["u:${1:X}"],
+			"description": "X (identities)"
+	}
+}

@@ -19,7 +19,8 @@
 		"vscode": "^1.43.0"
 	},
 	"activationEvents": [
-		"onLanguage:script"
+		"onLanguage:script",
+		"onLanguage:miniscript"
 	],
 	"main": "./client/out/extension",
 	"contributes": {
@@ -27,6 +28,14 @@
 			{
 				"language": "script",
 				"path": "./snippets/script.snippet.json"
+			},
+			{
+				"language": "miniscript",
+				"path": "./snippets/miniscript.snippet.json"
+			},
+			{
+				"language": "miniscript.policy",
+				"path": "./snippets/miniscript.policy.snippet.json"
 			}
 		],
 		"languages": [
@@ -38,7 +47,27 @@
 				"extensions": [
 					"script"
 				],
-				"configuration": "./languages/script.language.configuration.json"
+				"configuration": "./languages/script.language.json"
+			},
+			{
+				"id": "miniscript",
+				"aliases": [
+					"miniscript"
+				],
+				"extensions": [
+					"miniscript"
+				],
+				"configuration": "./languages/miniscript.language.json"
+			},
+			{
+				"id": "miniscript.policy",
+				"aliases": [
+					"miniscript.policy"
+				],
+				"extensions": [
+					"policy.miniscript"
+				],
+				"configuration": "./languages/miniscript.policy.language.json"
 			}
 		],
 		"grammars": [
@@ -46,6 +75,16 @@
 				"language": "script",
 				"scopeName": "source.script",
 				"path": "./grammars/script.grammar.json"
+			},
+			{
+				"language": "miniscript",
+				"scopeName": "source.miniscript",
+				"path": "./grammars/miniscript.grammar.json"
+			},
+			{
+				"language": "miniscript.policy",
+				"scopeName": "source.policy.miniscript",
+				"path": "./grammars/miniscript.policy.grammar.json"
 			}
 		],
 		"configuration": {

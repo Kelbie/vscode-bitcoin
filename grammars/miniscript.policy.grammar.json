@@ -1,0 +1,54 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "policy.miniscript",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "meta.policy.miniscript",
+					"match": "\\<([\\w]+?)\\>"
+				},
+				{
+					"name": "entity.name.policy.miniscript",
+					"match": "\\b(and|or)\\b"
+				},
+				{
+					"name": "constant.character.policy.miniscript",
+					"match": "\\b(pk)\\b"
+				},
+				{
+					"name": "constant.numeric.policy.miniscript",
+					"match": "\\b(older|after)\\b"
+				},
+				{
+					"name":"keyword.control.policy.miniscript",
+					"match": "\\b(thresh)\\b"
+				},
+				{
+					"name": "string.quoted.policy.miniscript",
+					"match": "\\b(sha256|hash256|ripemd160|hash160)\\b"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.policy.miniscript",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.policy.miniscript",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "source.policy.miniscript"
+}
