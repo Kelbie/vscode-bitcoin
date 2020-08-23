@@ -1,24 +1,760 @@
 {
 	"Pay To Script Hash": {
-			"prefix": ["p2sh"],
-			"body": ["OP_HASH160 ${1:<scriptHash>} OP_EQUAL"],
-			"description": ""
+		"prefix": [
+			"p2sh"
+		],
+		"body": [
+			"OP_HASH160 ${1:<scriptHash>} OP_EQUAL"
+		],
+		"description": ""
 	},
 	"Pay To Public Key": {
-			"prefix": ["p2pk"],
-			"body": ["${1:<publicKey>} OP_CHECKSIG"],
-			"description": ""
+		"prefix": [
+			"p2pk"
+		],
+		"body": [
+			"${1:<publicKey>} OP_CHECKSIG"
+		],
+		"description": ""
 	},
 	"Pay To Public Key Hash": {
-			"prefix": ["p2pkh"],
-			"body": [
-					"OP_DUP OP_HASH160 ${1:<hashedPublicKey>} OP_EQUALVERIFY OP_CHECKSIG"
-			],
-			"description": ""
+		"prefix": [
+			"p2pkh"
+		],
+		"body": [
+			"OP_DUP OP_HASH160 ${1:<hashedPublicKey>} OP_EQUALVERIFY OP_CHECKSIG"
+		],
+		"description": ""
 	},
 	"NULL DATA": {
-			"prefix": ["nd"],
-			"body": ["OP_RETURN ${1:<data>}"],
-			"description": "Storing data in bitcoin transactions."
+		"prefix": [
+			"nd"
+		],
+		"body": [
+			"OP_RETURN ${1:<data>}"
+		],
+		"description": "Storing data in bitcoin transactions."
+	},
+	"OP_CHECKLOCKTIMEVERIFY": {
+		"prefix": [
+			"OP_CHECKLOCKTIMEVERIFY",
+			"OP_NOP2"
+		],
+		"body": [
+			"OP_CHECKLOCKTIMEVERIFY"
+		]
+	},
+	"OP_CHECKSEQUENCEVERIFY": {
+		"prefix": [
+			"OP_CHECKSEQUENCEVERIFY",
+			"OP_NOP3"
+		],
+		"body": [
+			"OP_CHECKSEQUENCEVERIFY"
+		]
+	},
+	"OP_1ADD": {
+		"prefix": [
+			"OP_1ADD"
+		],
+		"body": [
+			"OP_1ADD"
+		]
+	},
+	"OP_1SUB": {
+		"prefix": [
+			"OP_1SUB"
+		],
+		"body": [
+			"OP_1SUB"
+		]
+	},
+	"OP_2MUL": {
+		"prefix": [
+			"OP_2MUL"
+		],
+		"body": [
+			"OP_2MUL"
+		]
+	},
+	"OP_2DIV": {
+		"prefix": [
+			"OP_2DIV"
+		],
+		"body": [
+			"OP_2DIV"
+		]
+	},
+	"OP_NEGATE": {
+		"prefix": [
+			"OP_NEGATE"
+		],
+		"body": [
+			"OP_NEGATE"
+		]
+	},
+	"OP_ABS": {
+		"prefix": [
+			"OP_ABS"
+		],
+		"body": [
+			"OP_ABS"
+		]
+	},
+	"OP_NOT": {
+		"prefix": [
+			"OP_NOT"
+		],
+		"body": [
+			"OP_NOT"
+		]
+	},
+	"OP_0NOTEQUAL": {
+		"prefix": [
+			"OP_0NOTEQUAL"
+		],
+		"body": [
+			"OP_0NOTEQUAL"
+		]
+	},
+	"OP_ADD": {
+		"prefix": [
+			"OP_ADD"
+		],
+		"body": [
+			"OP_ADD"
+		]
+	},
+	"OP_SUB": {
+		"prefix": [
+			"OP_SUB"
+		],
+		"body": [
+			"OP_SUB"
+		]
+	},
+	"OP_MUL": {
+		"prefix": [
+			"OP_MUL"
+		],
+		"body": [
+			"OP_MUL"
+		]
+	},
+	"OP_DIV": {
+		"prefix": [
+			"OP_DIV"
+		],
+		"body": [
+			"OP_DIV"
+		]
+	},
+	"OP_MOD": {
+		"prefix": [
+			"OP_MOD"
+		],
+		"body": [
+			"OP_MOD"
+		]
+	},
+	"OP_LSHIFT": {
+		"prefix": [
+			"OP_LSHIFT"
+		],
+		"body": [
+			"OP_LSHIFT"
+		]
+	},
+	"OP_RSHIFT": {
+		"prefix": [
+			"OP_RSHIFT"
+		],
+		"body": [
+			"OP_RSHIFT"
+		]
+	},
+	"OP_BOOLAND": {
+		"prefix": [
+			"OP_BOOLAND"
+		],
+		"body": [
+			"OP_BOOLAND"
+		]
+	},
+	"OP_BOOLOR": {
+		"prefix": [
+			"OP_BOOLOR"
+		],
+		"body": [
+			"OP_BOOLOR"
+		]
+	},
+	"OP_NUMEQUAL": {
+		"prefix": [
+			"OP_NUMEQUAL"
+		],
+		"body": [
+			"OP_NUMEQUAL"
+		]
+	},
+	"OP_NUMEQUALVERIFY": {
+		"prefix": [
+			"OP_NUMEQUALVERIFY"
+		],
+		"body": [
+			"OP_NUMEQUALVERIFY"
+		]
+	},
+	"OP_NUMNOTEQUAL": {
+		"prefix": [
+			"OP_NUMNOTEQUAL"
+		],
+		"body": [
+			"OP_NUMNOTEQUAL"
+		]
+	},
+	"OP_LESSTHAN": {
+		"prefix": [
+			"OP_LESSTHAN"
+		],
+		"body": [
+			"OP_LESSTHAN"
+		]
+	},
+	"OP_GREATERTHAN": {
+		"prefix": [
+			"OP_GREATERTHAN"
+		],
+		"body": [
+			"OP_GREATERTHAN"
+		]
+	},
+	"OP_LESSTHANOREQUAL": {
+		"prefix": [
+			"OP_LESSTHANOREQUAL"
+		],
+		"body": [
+			"OP_LESSTHANOREQUAL"
+		]
+	},
+	"OP_GREATERTHANOREQUAL": {
+		"prefix": [
+			"OP_GREATERTHANOREQUAL"
+		],
+		"body": [
+			"OP_GREATERTHANOREQUAL"
+		]
+	},
+	"OP_MIN": {
+		"prefix": [
+			"OP_MIN"
+		],
+		"body": [
+			"OP_MIN"
+		]
+	},
+	"OP_MAX": {
+		"prefix": [
+			"OP_MAX"
+		],
+		"body": [
+			"OP_MAX"
+		]
+	},
+	"OP_WITHIN": {
+		"prefix": [
+			"OP_WITHIN"
+		],
+		"body": [
+			"OP_WITHIN"
+		]
+	},
+	"OP_CAT": {
+		"prefix": [
+			"OP_CAT"
+		],
+		"body": [
+			"OP_CAT"
+		]
+	},
+	"OP_SUBSTR": {
+		"prefix": [
+			"OP_SUBSTR"
+		],
+		"body": [
+			"OP_SUBSTR"
+		]
+	},
+	"OP_LEFT": {
+		"prefix": [
+			"OP_LEFT"
+		],
+		"body": [
+			"OP_LEFT"
+		]
+	},
+	"OP_RIGHT": {
+		"prefix": [
+			"OP_RIGHT"
+		],
+		"body": [
+			"OP_RIGHT"
+		]
+	},
+	"OP_SIZE": {
+		"prefix": [
+			"OP_SIZE"
+		],
+		"body": [
+			"OP_SIZE"
+		]
+	},
+	"OP_NOP": {
+		"prefix": [
+			"OP_NOP"
+		],
+		"body": [
+			"OP_NOP"
+		]
+	},
+	"OP_IF": {
+		"prefix": [
+			"OP_IF"
+		],
+		"body": [
+			"OP_IF"
+		]
+	},
+	"OP_NOTIF": {
+		"prefix": [
+			"OP_NOTIF"
+		],
+		"body": [
+			"OP_NOTIF"
+		]
+	},
+	"OP_ELSE": {
+		"prefix": [
+			"OP_ELSE"
+		],
+		"body": [
+			"OP_ELSE"
+		]
+	},
+	"OP_ENDIF": {
+		"prefix": [
+			"OP_ENDIF"
+		],
+		"body": [
+			"OP_ENDIF"
+		]
+	},
+	"OP_VERIFY": {
+		"prefix": [
+			"OP_VERIFY"
+		],
+		"body": [
+			"OP_VERIFY"
+		]
+	},
+	"OP_RETURN": {
+		"prefix": [
+			"OP_RETURN"
+		],
+		"body": [
+			"OP_RETURN"
+		]
+	},
+	"OP_TOALTSTACK": {
+		"prefix": [
+			"OP_TOALTSTACK"
+		],
+		"body": [
+			"OP_TOALTSTACK"
+		]
+	},
+	"OP_FROMALTSTACK": {
+		"prefix": [
+			"OP_FROMALTSTACK"
+		],
+		"body": [
+			"OP_FROMALTSTACK"
+		]
+	},
+	"OP_IFDUP": {
+		"prefix": [
+			"OP_IFDUP"
+		],
+		"body": [
+			"OP_IFDUP"
+		]
+	},
+	"OP_DEPTH": {
+		"prefix": [
+			"OP_DEPTH"
+		],
+		"body": [
+			"OP_DEPTH"
+		]
+	},
+	"OP_DROP": {
+		"prefix": [
+			"OP_DROP"
+		],
+		"body": [
+			"OP_DROP"
+		]
+	},
+	"OP_DUP": {
+		"prefix": [
+			"OP_DUP"
+		],
+		"body": [
+			"OP_DUP"
+		]
+	},
+	"OP_NIP": {
+		"prefix": [
+			"OP_NIP"
+		],
+		"body": [
+			"OP_NIP"
+		]
+	},
+	"OP_OVER": {
+		"prefix": [
+			"OP_OVER"
+		],
+		"body": [
+			"OP_OVER"
+		]
+	},
+	"OP_PICK": {
+		"prefix": [
+			"OP_PICK"
+		],
+		"body": [
+			"OP_PICK"
+		]
+	},
+	"OP_ROLL": {
+		"prefix": [
+			"OP_ROLL"
+		],
+		"body": [
+			"OP_ROLL"
+		]
+	},
+	"OP_ROT": {
+		"prefix": [
+			"OP_ROT"
+		],
+		"body": [
+			"OP_ROT"
+		]
+	},
+	"OP_SWAP": {
+		"prefix": [
+			"OP_SWAP"
+		],
+		"body": [
+			"OP_SWAP"
+		]
+	},
+	"OP_TUCK": {
+		"prefix": [
+			"OP_TUCK"
+		],
+		"body": [
+			"OP_TUCK"
+		]
+	},
+	"OP_2DROP": {
+		"prefix": [
+			"OP_2DROP"
+		],
+		"body": [
+			"OP_2DROP"
+		]
+	},
+	"OP_2DUP": {
+		"prefix": [
+			"OP_2DUP"
+		],
+		"body": [
+			"OP_2DUP"
+		]
+	},
+	"OP_3DUP": {
+		"prefix": [
+			"OP_3DUP"
+		],
+		"body": [
+			"OP_3DUP"
+		]
+	},
+	"OP_2OVER": {
+		"prefix": [
+			"OP_2OVER"
+		],
+		"body": [
+			"OP_2OVER"
+		]
+	},
+	"OP_2ROT": {
+		"prefix": [
+			"OP_2ROT"
+		],
+		"body": [
+			"OP_2ROT"
+		]
+	},
+	"OP_2SWAP": {
+		"prefix": [
+			"OP_2SWAP"
+		],
+		"body": [
+			"OP_2SWAP"
+		]
+	},
+	"OP_RIPEMD160": {
+		"prefix": [
+			"OP_RIPEMD160"
+		],
+		"body": [
+			"OP_RIPEMD160"
+		]
+	},
+	"OP_SHA1": {
+		"prefix": [
+			"OP_SHA1"
+		],
+		"body": [
+			"OP_SHA1"
+		]
+	},
+	"OP_SHA256": {
+		"prefix": [
+			"OP_SHA256"
+		],
+		"body": [
+			"OP_SHA256"
+		]
+	},
+	"OP_HASH160": {
+		"prefix": [
+			"OP_HASH160"
+		],
+		"body": [
+			"OP_HASH160"
+		]
+	},
+	"OP_HASH256": {
+		"prefix": [
+			"OP_HASH256"
+		],
+		"body": [
+			"OP_HASH256"
+		]
+	},
+	"OP_CODESEPARATOR": {
+		"prefix": [
+			"OP_CODESEPARATOR"
+		],
+		"body": [
+			"OP_CODESEPARATOR"
+		]
+	},
+	"OP_CHECKSIG": {
+		"prefix": [
+			"OP_CHECKSIG"
+		],
+		"body": [
+			"OP_CHECKSIG"
+		]
+	},
+	"OP_CHECKSIGVERIFY": {
+		"prefix": [
+			"OP_CHECKSIGVERIFY"
+		],
+		"body": [
+			"OP_CHECKSIGVERIFY"
+		]
+	},
+	"OP_CHECKMULTISIG": {
+		"prefix": [
+			"OP_CHECKMULTISIG"
+		],
+		"body": [
+			"OP_CHECKMULTISIG"
+		]
+	},
+	"OP_CHECKMULTISIGVERIFY": {
+		"prefix": [
+			"OP_CHECKMULTISIGVERIFY"
+		],
+		"body": [
+			"OP_CHECKMULTISIGVERIFY"
+		]
+	},
+	"OP_INVERT": {
+		"prefix": [
+			"OP_INVERT"
+		],
+		"body": [
+			"OP_INVERT"
+		]
+	},
+	"OP_AND": {
+		"prefix": [
+			"OP_AND"
+		],
+		"body": [
+			"OP_AND"
+		]
+	},
+	"OP_OR": {
+		"prefix": [
+			"OP_OR"
+		],
+		"body": [
+			"OP_OR"
+		]
+	},
+	"OP_XOR": {
+		"prefix": [
+			"OP_XOR"
+		],
+		"body": [
+			"OP_XOR"
+		]
+	},
+	"OP_EQUAL": {
+		"prefix": [
+			"OP_EQUAL"
+		],
+		"body": [
+			"OP_EQUAL"
+		]
+	},
+	"OP_EQUALVERIFY": {
+		"prefix": [
+			"OP_EQUALVERIFY"
+		],
+		"body": [
+			"OP_EQUALVERIFY"
+		]
+	},
+	"OP_RESERVED": {
+		"prefix": [
+			"OP_RESERVED"
+		],
+		"body": [
+			"OP_RESERVED"
+		]
+	},
+	"OP_VER": {
+		"prefix": [
+			"OP_VER"
+		],
+		"body": [
+			"OP_VER"
+		]
+	},
+	"OP_VERIF": {
+		"prefix": [
+			"OP_VERIF"
+		],
+		"body": [
+			"OP_VERIF"
+		]
+	},
+	"OP_VERNOTIF": {
+		"prefix": [
+			"OP_VERNOTIF"
+		],
+		"body": [
+			"OP_VERNOTIF"
+		]
+	},
+	"OP_RESERVED1": {
+		"prefix": [
+			"OP_RESERVED1"
+		],
+		"body": [
+			"OP_RESERVED1"
+		]
+	},
+	"OP_RESERVED2": {
+		"prefix": [
+			"OP_RESERVED2"
+		],
+		"body": [
+			"OP_RESERVED2"
+		]
+	},
+	"OP_NOP1": {
+		"prefix": [
+			"OP_NOP1"
+		],
+		"body": [
+			"OP_NOP1"
+		]
+	},
+	"OP_NOP4": {
+		"prefix": [
+			"OP_NOP4"
+		],
+		"body": [
+			"OP_NOP4"
+		]
+	},
+	"OP_NOP5": {
+		"prefix": [
+			"OP_NOP5"
+		],
+		"body": [
+			"OP_NOP5"
+		]
+	},
+	"OP_NOP6": {
+		"prefix": [
+			"OP_NOP6"
+		],
+		"body": [
+			"OP_NOP6"
+		]
+	},
+	"OP_NOP7": {
+		"prefix": [
+			"OP_NOP7"
+		],
+		"body": [
+			"OP_NOP7"
+		]
+	},
+	"OP_NOP8": {
+		"prefix": [
+			"OP_NOP8"
+		],
+		"body": [
+			"OP_NOP8"
+		]
+	},
+	"OP_NOP9": {
+		"prefix": [
+			"OP_NOP9"
+		],
+		"body": [
+			"OP_NOP9"
+		]
+	},
+	"OP_NOP10": {
+		"prefix": [
+			"OP_NOP10"
+		],
+		"body": [
+			"OP_NOP10"
+		]
 	}
 }
